@@ -1,10 +1,9 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-
 var app = express();
 app.use(morgan('combined'));
-var articleOne - {
+var articleOne; - {
     title:'Article One 1 Kushal Saxena',
     heading:'Aricle One',
     date: 'Sep 20, 2016',
