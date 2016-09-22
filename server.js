@@ -18,12 +18,12 @@ var articleOne; - {
                     This is the content for my first articlethis is the content for my first articlethis is the content for my first articlethis is the content for my first articlethis is the content for my first articlethis is the content for my first articlethis is the content for my first article
                 </p>`
 };
-function createTemplete (data) {
+function createTemplate (data) {
 var title = data.title;
 var date = data.date;
 var heading = data.heading;
 var content = data.content;
-var htmlTemplete =`
+var htmlTemplate =`
 <html>
     <head>
         <title>
@@ -50,7 +50,7 @@ var htmlTemplete =`
         </body>
    </html>
 `;
-return htmlTemplete;
+return htmlTemplate;
 }
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
@@ -60,7 +60,7 @@ app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 app.get('/article-one',function (req, res){
-res.send(createTemplete(title)); 
+res.send(createTemplate(articleOne)); 
 });
 app.get('/article-two',function (req, res){
 res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
