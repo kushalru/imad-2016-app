@@ -4,7 +4,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 var articleOne; - {
-    title:'Article One  Kushal Saxena',
+    title:'Article One 1 Kushal Saxena',
     heading:'Aricle One',
     date: 'Sep 20, 2016',
     content:` 
@@ -18,12 +18,12 @@ var articleOne; - {
                     This is the content for my first articlethis is the content for my first articlethis is the content for my first articlethis is the content for my first articlethis is the content for my first articlethis is the content for my first articlethis is the content for my first article
                 </p>`
 };
-function createTemplate (data) {
+function createTemplete (data) {
 var title = data.title;
 var date = data.date;
 var heading = data.heading;
 var content = data.content;
-var htmlTemplate =`
+var htmlTemplete =`
 <html>
     <head>
         <title>
@@ -50,7 +50,7 @@ var htmlTemplate =`
         </body>
    </html>
 `;
-return htmlTemplate;
+return htmlTemplete;
 }
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
