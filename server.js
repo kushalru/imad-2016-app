@@ -3,7 +3,8 @@ var morgan = require('morgan');
 var path = require('path');
 var app = express();
 app.use(morgan('combined'));
-var articleOne = {
+var articles = {
+    'article-0ne': {
     title:'Article One 1 Kushal Saxena',
     heading:'Aricle One',
     date: 'Sep 20, 2016',
@@ -17,7 +18,28 @@ var articleOne = {
                 <p>
                     This is the content for my first articlethis is the content for my first articlethis is the content for my first articlethis is the content for my first articlethis is the content for my first articlethis is the content for my first articlethis is the content for my first article
                 </p>`
+},
+    'article-two': {
+    title:'Article Two 1 Kushal Saxena',
+    heading:'Aricle Two',
+    date: 'Sep 23, 2016',
+    content:` 
+                <p>
+                    This is the content for my Second article
+                </p>`
+        
+    },
+  'article-three': {
+    title:'Article Three 1 Kushal Saxena',
+    heading:'Aricle Three',
+    date: 'Sep 25, 2016',
+    content:` 
+                <p>
+                    This is the content for my Thirld article
+                </p>`
+}
 };
+
 function createTemplate (data) {
 var title = data.title;
 var date = data.date;
@@ -59,15 +81,13 @@ app.get('/', function (req, res) {
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
-app.get('/article-one',function (req, res){
-res.send(createTemplate(articleOne)); 
+app.get('/:articleName',function (req, res){
+    //articleName will be article-one
+    //articles[articleName]- {} contains object for article one
+var articleName = req.params.articleName;
+res.send(createTemplate(articles[articlename])); 
 });
-app.get('/article-two',function (req, res){
-res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
-});
-app.get('/article-three',function (req, res){
-res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
-});
+
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
