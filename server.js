@@ -20,7 +20,7 @@ var articles = {
                 </p>`
 },
     'article-two': {
-    title:'Article Two 1 Kushal Saxena',
+    title:'Article Two 2 Kushal Saxena',
     heading:'Aricle Two',
     date: 'Sep 23, 2016',
     content:` 
@@ -30,7 +30,7 @@ var articles = {
         
     },
   'article-three': {
-    title:'Article Three 1 Kushal Saxena',
+    title:'Article Three 3 Kushal Saxena',
     heading:'Aricle Three',
     date: 'Sep 25, 2016',
     content:` 
