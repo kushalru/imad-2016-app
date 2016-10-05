@@ -2,9 +2,8 @@ body {
     font-family: sans-serif;
     margin-top: 60px;
     background-color:yellow;
-    background:"http://supernovathemes.com/wp-content/themes/supernovathemes/images/bg/b2.png";
+    background-image:url(http://supernovathemes.com/wp-content/themes/supernovathemes/images/bg/b2.png);
 }
-
 .center {
     text-align: center;
 }
