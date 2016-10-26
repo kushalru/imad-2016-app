@@ -27,12 +27,3 @@ body {
     padding-left: 20;
     padding-right: 20
 }
-.col-xs-3 {
-    border-right: 1px solid #DDD;
-    line-height: 40pt;
-    font-family:'Tahoma';
-    font-size: 15pt;
-    font-weight: bold;
-    margin: 0;
-    padding: 0;
-}
