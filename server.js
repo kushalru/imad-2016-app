@@ -33,10 +33,6 @@ var articles = {
                 </p>`
 }
 };
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'Contact-us.html'));
-});
-
 function createTemplate (data) {
 var title = data.title;
 var date = data.date;
