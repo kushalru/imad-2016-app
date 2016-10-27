@@ -33,6 +33,9 @@ var articles = {
                 </p>`
 }
 };
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'Contact-us.html'));
+});
 
 function createTemplate (data) {
 var title = data.title;
@@ -70,9 +73,6 @@ return htmlTemplate;
 }
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-});
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'Contact-us.html'));
 });
 var counter = 0;
 app.get('/counter', function(req, res){
