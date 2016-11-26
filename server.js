@@ -13,8 +13,7 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 var articles = {
-    var articles= 
-    'article-one': {
+  'article-one': {
     title:'Article One 1 Kushal Saxena',
     heading:'Aricle One',
     date: 'Sep 20, 2016',
