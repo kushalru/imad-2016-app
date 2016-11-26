@@ -13,6 +13,11 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 var articles = {
+    var articles={
+'Contact us': {
+Content: `<p>
+       'Some content'
+       </p>`
     'article-one': {
     title:'Article One 1 Kushal Saxena',
     heading:'Aricle One',
