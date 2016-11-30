@@ -19,36 +19,7 @@ app.use(session({
     secret: 'someRandomSecretValue',
     cookie: { maxAge: 1000 * 60 * 60 * 24 * 30}
 }));
-var articles = {
-  'article-one': {
-    title:'Article One 1 Kushal Saxena',
-    heading:'Aricle One',
-    date: 'Sep 20, 2016',
-    content:` 
-                <p>
-                    This is the content for my first article 
-                </p>`
-},
-    'article-two': {
-    title:'Article Two 2 Kushal Saxena',
-    heading:'Aricle Two',
-    date: 'Sep 23, 2016',
-    content:` 
-                <p>
-                    This is the content for my Second article
-                </p>`
-        
-    },
-  'article-three': {
-    title:'Article Three 3 Kushal Saxena',
-    heading:'Aricle Three',
-    date: 'Sep 25, 2016',
-    content:` 
-                <p>
-                    This is the content for my Thirld article
-                </p>`
-}
-};
+
 function createTemplate (data) {
 var title = data.title;
 var date = data.date;
