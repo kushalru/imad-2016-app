@@ -161,10 +161,10 @@ app.get('/logout', function (req, res) {
    res.send('<html><body>Logged out!<br/><br/><a href="/">Back to home</a></body></html>');
 });
 var pool = new Pool(config);
-app.get('/test-db',function (req,res){
+app.get('/get-articles', function (req, res){
  //make a select request
  // return a response with the results
- pool.query('SELECT * FROM test',function(err, reults){
+ pool.query('SELECT * FROM article ORDER BY date DESC', function (err, reults){
      if (err) {
          res.status(500).send(err.toString());
      } else {
